@@ -1,0 +1,29 @@
+<a href="/">...Main Menu</a><br> 
+<form action="/insert" method="GET">
+  <h3>Enter Details to Insert</h3>
+<input type="text" placeholder="Enter Employee No."  name="no"><br>
+<input type="text" placeholder="Enter Employee Name"  name="name"><br>
+<input type="text" placeholder="Enter Employee Salary"  name="salary"><br>
+<input type="text" placeholder="Enter Employee Role"  name="role"><br>
+<input type="submit" value="Insert Data">
+</form>
+
+<!-- show records below -->
+<table>
+  <tr>
+    <th>Employe No.</th>
+    <th>Name</th>
+    <th>Salary</th>
+    <th>Role</th>
+  </tr>
+  
+<% for(var i=0; i < result.length ; i++) {%>
+  <tr>
+    <td><%=result[i].no%></td>
+    <td><%=result[i].name%></td>
+    <td><%=result[i].salary%></td>
+    <td><%=result[i].role%></td>
+  </tr>
+<% } %>
+</table>
+

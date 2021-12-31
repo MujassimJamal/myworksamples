@@ -1,0 +1,24 @@
+<a href="/">...Main Menu</a><br> 
+<form action="/delete" method="GET">
+<input type="text" placeholder="Enter Employee id"  name="id">
+<input type="submit" value="Delete Data">
+</form>
+
+<!-- show records below -->
+<table>
+  <tr>
+    <th>Employe No.</th>
+    <th>Name</th>
+    <th>Salary</th>
+    <th>Role</th>
+  </tr>
+  
+<% for(var i=0; i < result.length ; i++) {%>
+  <tr>
+    <td><%=result[i].no%></td>
+    <td><%=result[i].name%></td>
+    <td><%=result[i].salary%></td>
+    <td><%=result[i].role%></td>
+  </tr>
+<% } %>
+</table>

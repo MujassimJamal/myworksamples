@@ -1,0 +1,29 @@
+<a href="/">...Main Menu</a><br> 
+<form action="/id" method="GET">
+<input type="text" placeholder="Enter Employee id"  name="id">
+<input type="submit" value="Get Data">
+</form>
+
+<!-- show records below -->
+<!-- show below record IF USER ENTERs ID -->
+<% if (id) {%>
+
+<table>
+  <tr>
+    <th>Employe No.</th>
+    <th>Name</th>
+    <th>Salary</th>
+    <th>Role</th>
+  </tr>
+  
+<% for(var i=0; i < resultbyid.length ; i++) {%>
+  <tr>
+    <td><%=resultbyid[i].no%></td>
+    <td><%=resultbyid[i].name%></td>
+    <td><%=resultbyid[i].salary%></td>
+    <td><%=resultbyid[i].role%></td>
+  </tr>
+<% } %>
+</table>
+
+<% } %>
